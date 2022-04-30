@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+  int x,a,b,p;
+  printf("Welcome to C Calculator\n");
+  printf("Press:\n1 for Addition\n2 for Subtraction\n3 for Multiplication\n4 for Division\n5 for Modulus\n6 for Power\n7 for Comparison\n");
+  printf("Enter the number of Operator : ");
+  scanf("%d",&x);
+  printf("Enter two Operands : ");
+  scanf("%d %d",&a,&b);
+  switch(x) {
+    case 1:
+      printf("%d + %d = %d",a,b,a+b);
+      break;
+    case 2:
+      printf("%d - %d = %d",a,b,a-b);
+      break;
+    case 3:
+      printf("%d x %d = %d",a,b,a*b);
+      break;
+    case 4:
+      printf("%d / %d = %d",a,b,a/b);
+      break;
+    case 5:
+      printf("%d // %d = %d",a,b,a%b);
+      break;
+    case 6:{
+      p=pow(a,b);
+      printf("%d ^ %d = %d",a,b,p);
+      break;
+      }
+    case 7:
+    {
+      if (a>b){
+        printf("%d is greater than %d",a,b);
+        break;
+        }
+      else if (a<b){
+        printf("%d is less than %d",a,b);
+        break;
+        }
+      else{
+        printf("%d is equal to %d",a,b);
+        break;
+        }
+    }
+    default:
+      printf("Error!Operator does not exist");
+    }
+ return 0;
+ }
+      
+  
